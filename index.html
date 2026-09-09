@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarundeep Arora — Data Science Student &amp; Developer</title>
+  <meta name="description" content="Tarundeep Arora — Data Science student at Simon Fraser University. Full-stack projects in React, Next.js, FastAPI, and Python. Open to co-op opportunities." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">TA<span class="dot">.</span></a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero container">
+      <p class="eyebrow">Available for Co-op · Winter/Summer</p>
+      <h1>Hi, I'm Tarundeep Arora.<br />I build <span class="highlight">full-stack products</span> and dig into data.</h1>
+      <p class="hero-sub">Data Science student at Simon Fraser University, building end-to-end applications with React, Next.js, FastAPI, and Python — from privacy-first mobile-web apps to sensor-driven hardware systems.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="assets/Tarundeep_Arora_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download Résumé</a>
+        <a href="mailto:tda47@sfu.ca" class="btn btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/GodFather1180" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a href="mailto:tda47@sfu.ca" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-13z"></path><path d="m3.5 5 8.5 7 8.5-7"></path></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2 class="section-title"><span class="tag">01</span> About</h2>
+      <div class="about-grid">
+        <p class="about-text">
+          I'm a Data Science undergrad at Simon Fraser University (2023–2028), based in the Vancouver area.
+          I like building things end-to-end — backend APIs, databases, and the frontends that sit on top of them —
+          and I'm just as comfortable soldering sensors to a breadboard as I am designing a REST API.
+          Recent work spans encrypted local-first apps, containerized services with PostgreSQL, and a chess
+          engine with a custom AI opponent. I'm currently looking for a co-op where I can apply that range on a real team.
+        </p>
+        <div class="about-facts">
+          <div class="fact"><span class="fact-label">Location</span><span>North Delta / Burnaby, BC</span></div>
+          <div class="fact"><span class="fact-label">Program</span><span>B.Sc. Data Science, SFU</span></div>
+          <div class="fact"><span class="fact-label">Languages</span><span>English, Hindi, Punjabi, Spanish</span></div>
+          <div class="fact"><span class="fact-label">Focus</span><span>Full-stack &amp; applied data</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <h2 class="section-title"><span class="tag">02</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <div class="chips">
+            <span>Python</span><span>TypeScript</span><span>Java</span><span>C++</span><span>C</span><span>R</span><span>HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Frameworks</h3>
+          <div class="chips">
+            <span>React</span><span>Next.js</span><span>FastAPI</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Tools &amp; Infra</h3>
+          <div class="chips">
+            <span>Docker</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Git/GitHub</span><span>VS Code</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Data &amp; Stats</h3>
+          <div class="chips">
+            <span>Pandas</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>PySpark</span><span>Excel</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Design &amp; EE</h3>
+          <div class="chips">
+            <span>SolidWorks</span><span>AutoCAD</span><span>LTspice</span><span>MATLAB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="section-title"><span class="tag">03</span> Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card featured">
+          <div class="project-head">
+            <h3>Self-First</h3>
+            <span class="project-date">Dec 2025</span>
+          </div>
+          <p class="project-type">Personal · TypeScript, React, Next.js, REST API</p>
+          <p>Privacy-first habit tracking app with a local-first architecture for full offline functionality
+            and end-to-end encrypted cloud sync — the server never sees plaintext user data.</p>
+          <ul>
+            <li>Account authentication and device linking</li>
+            <li>Secure JSON export/import and backup</li>
+            <li>Accessible UI with dark mode and large-text preferences</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project-card featured">
+          <div class="project-head">
+            <h3>Daily Dilemma</h3>
+            <span class="project-date">Oct – Dec 2025</span>
+          </div>
+          <p class="project-type">Group · React, FastAPI, PostgreSQL, Docker</p>
+          <p>Full-stack app where users answer daily ethical dilemmas and see real-time community results,
+            backed by a dedicated user service with authentication and analytics.</p>
+          <ul>
+            <li>FastAPI backend for game logic and majority-outcome computation</li>
+            <li>User Service API with auth and player tracking</li>
+            <li>Containerized with Docker; PostgreSQL via SQLAlchemy</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <h3>Chess Game</h3>
+            <span class="project-date">Dec 2024</span>
+          </div>
+          <p class="project-type">Personal · C++</p>
+          <p>A full chess implementation in C++ with Player vs. Player and Player vs. AI modes, featuring
+            a custom AI opponent for strategic, challenging gameplay.</p>
+          <div class="project-links">
+            <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <h3>Automated Planter Box</h3>
+            <span class="project-date">Sept – Dec 2024</span>
+          </div>
+          <p class="project-type">Group · Sensors, Arduino, Mechanical Design</p>
+          <p>An automated irrigation system that monitors soil moisture and activates drip irrigation
+            accordingly, with a motorized roof for rain/snow protection and manual override.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <h3>Weather App</h3>
+            <span class="project-date">Sept 2024</span>
+          </div>
+          <p class="project-type">Personal · Java, HTML, CSS, JavaScript</p>
+          <p>A responsive weather app pulling real-time API data into a dynamic frontend, with local
+            storage caching to cut redundant API calls and speed up repeat visits.</p>
+          <div class="project-links">
+            <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project-card featured">
+          <div class="project-head">
+            <h3>Shrinkflation in Canadian Groceries</h3>
+            <span class="project-date">CMPT 353</span>
+          </div>
+          <p class="project-type">Course Project · Python, Pandas, SciPy, scikit-learn</p>
+          <p>A statistical analysis of whether package sizes shrank while prices held or rose across major
+            Canadian grocery chains, benchmarked against StatCan's official food CPI.</p>
+          <ul>
+            <li>Cleaned and joined ~70M scraped price observations (Project Hammer) with StatCan CPI data</li>
+            <li>Built a custom price index and compared it against official inflation figures</li>
+            <li>Ran significance testing and regression to detect shrinkflation candidates by vendor</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <h3>Reddit Corpus Analysis</h3>
+            <span class="project-date">CMPT 353</span>
+          </div>
+          <p class="project-type">Course Project · PySpark, Pandas, scikit-learn</p>
+          <p>Large-scale analysis of Reddit submission data on the SFU Hadoop cluster, studying what drives
+            post success and whether regional subreddits scale with real-world population.</p>
+          <ul>
+            <li>PySpark extraction pipeline over Hive-partitioned submission/comment data on HDFS</li>
+            <li>Kruskal-Wallis, Mann-Whitney, and a gradient-boosted classifier with per-category stratification</li>
+            <li>Power-law fit of subreddit activity against 2021 census population data</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / EDUCATION -->
+    <section id="experience" class="section container">
+      <h2 class="section-title"><span class="tag">04</span> Experience &amp; Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>B.Sc. Data Science</h3>
+              <span class="timeline-date">Sept 2023 – 2028</span>
+            </div>
+            <p class="timeline-sub">Simon Fraser University — Burnaby, BC</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <h3>Receptionist</h3>
+              <span class="timeline-date">Jun 2022 – Jan 2023</span>
+            </div>
+            <p class="timeline-sub">Fortune Law</p>
+            <p>Managed client records and spreadsheets, handled phone inquiries and appointment scheduling,
+              and provided administrative support including file handling for legal documents.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container contact-section">
+      <h2 class="section-title"><span class="tag">05</span> Contact</h2>
+      <p class="contact-lead">Looking for a co-op student who can jump into full-stack work or data projects? I'd love to hear from you.</p>
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:tda47@sfu.ca">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">tda47@sfu.ca</span>
+        </a>
+        <a class="contact-card" href="https://github.com/GodFather1180" target="_blank" rel="noopener">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/GodFather1180</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Tarundeep Arora. Built from scratch.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
