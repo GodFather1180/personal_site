@@ -120,6 +120,36 @@
 
         <article class="project-card featured">
           <div class="project-head">
+            <h3>Shrinkflation in Canadian Groceries</h3>
+            <span class="project-date">CMPT 353</span>
+          </div>
+          <p class="project-type">Course Project · Python, Pandas, SciPy, scikit-learn</p>
+          <p>A statistical analysis of whether package sizes shrank while prices held or rose across major
+            Canadian grocery chains, benchmarked against StatCan's official food CPI.</p>
+          <ul>
+            <li>Cleaned and joined ~70M scraped price observations (Project Hammer) with StatCan CPI data</li>
+            <li>Built a custom price index and compared it against official inflation figures</li>
+            <li>Ran significance testing and regression to detect shrinkflation candidates by vendor</li>
+          </ul>
+        </article>
+
+        <article class="project-card featured">
+          <div class="project-head">
+            <h3>Reddit Corpus Analysis</h3>
+            <span class="project-date">CMPT 353</span>
+          </div>
+          <p class="project-type">Course Project · PySpark, Pandas, scikit-learn</p>
+          <p>Large-scale analysis of Reddit submission data on the SFU Hadoop cluster, studying what drives
+            post success and whether regional subreddits scale with real-world population.</p>
+          <ul>
+            <li>PySpark extraction pipeline over Hive-partitioned submission/comment data on HDFS</li>
+            <li>Kruskal-Wallis, Mann-Whitney, and a gradient-boosted classifier with per-category stratification</li>
+            <li>Power-law fit of subreddit activity against 2021 census population data</li>
+          </ul>
+        </article>
+
+        <article class="project-card featured">
+          <div class="project-head">
             <h3>Self-First</h3>
             <span class="project-date">Dec 2025</span>
           </div>
@@ -156,6 +186,24 @@
 
         <article class="project-card">
           <div class="project-head">
+            <h3>LED Board — Spotify Display</h3>
+            <span class="project-date">Personal</span>
+          </div>
+          <p class="project-type">Personal · Python, Raspberry Pi</p>
+          <p>Drives a 64×32 RGB LED matrix on a Raspberry Pi with a Spotify "Now Playing" mode — album art,
+            centered title, and a scrolling lyric line — plus a web-controlled text scroller.</p>
+          <ul>
+            <li>Single-process-per-mode design with smooth, tick-based scrolling</li>
+            <li>No blocking I/O in the render loop</li>
+            <li>Web UI for controlling the scroller remotely over local network</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/GodFather1180/led_board" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
             <h3>Chess Game</h3>
             <span class="project-date">Dec 2024</span>
           </div>
@@ -164,19 +212,6 @@
             a custom AI opponent for strategic, challenging gameplay.</p>
           <div class="project-links">
             <a href="https://github.com/GodFather1180/CHESS" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Automated Planter Box</h3>
-            <span class="project-date">Sept – Dec 2024</span>
-          </div>
-          <p class="project-type">Group · Sensors, Arduino, Mechanical Design</p>
-          <p>An automated irrigation system that monitors soil moisture and activates drip irrigation
-            accordingly, with a motorized roof for rain/snow protection and manual override.</p>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/planter-box" target="_blank" rel="noopener">View on GitHub →</a>
           </div>
         </article>
 
@@ -195,19 +230,14 @@
 
         <article class="project-card">
           <div class="project-head">
-            <h3>LED Board — Spotify Display</h3>
+            <h3>Currency Converter</h3>
             <span class="project-date">Personal</span>
           </div>
-          <p class="project-type">Personal · Python, Raspberry Pi</p>
-          <p>Drives a 64×32 RGB LED matrix on a Raspberry Pi with a Spotify "Now Playing" mode — album art,
-            centered title, and a scrolling lyric line — plus a web-controlled text scroller.</p>
-          <ul>
-            <li>Single-process-per-mode design with smooth, tick-based scrolling</li>
-            <li>No blocking I/O in the render loop</li>
-            <li>Web UI for controlling the scroller remotely over local network</li>
-          </ul>
+          <p class="project-type">Personal · Python, Tkinter, REST API</p>
+          <p>A desktop currency converter with a Tkinter GUI, converting between currencies in real time
+            via a live exchange-rate API.</p>
           <div class="project-links">
-            <a href="https://github.com/GodFather1180/led_board" target="_blank" rel="noopener">View on GitHub →</a>
+            <a href="https://github.com/GodFather1180/Currency-Converter" target="_blank" rel="noopener">View on GitHub →</a>
           </div>
         </article>
 
@@ -239,45 +269,15 @@
 
         <article class="project-card">
           <div class="project-head">
-            <h3>Currency Converter</h3>
-            <span class="project-date">Personal</span>
+            <h3>Automated Planter Box</h3>
+            <span class="project-date">Sept – Dec 2024</span>
           </div>
-          <p class="project-type">Personal · Python, Tkinter, REST API</p>
-          <p>A desktop currency converter with a Tkinter GUI, converting between currencies in real time
-            via a live exchange-rate API.</p>
+          <p class="project-type">Group · Sensors, Arduino, Mechanical Design</p>
+          <p>An automated irrigation system that monitors soil moisture and activates drip irrigation
+            accordingly, with a motorized roof for rain/snow protection and manual override.</p>
           <div class="project-links">
-            <a href="https://github.com/GodFather1180/Currency-Converter" target="_blank" rel="noopener">View on GitHub →</a>
+            <a href="https://github.com/GodFather1180/planter-box" target="_blank" rel="noopener">View on GitHub →</a>
           </div>
-        </article>
-
-        <article class="project-card featured">
-          <div class="project-head">
-            <h3>Shrinkflation in Canadian Groceries</h3>
-            <span class="project-date">CMPT 353</span>
-          </div>
-          <p class="project-type">Course Project · Python, Pandas, SciPy, scikit-learn</p>
-          <p>A statistical analysis of whether package sizes shrank while prices held or rose across major
-            Canadian grocery chains, benchmarked against StatCan's official food CPI.</p>
-          <ul>
-            <li>Cleaned and joined ~70M scraped price observations (Project Hammer) with StatCan CPI data</li>
-            <li>Built a custom price index and compared it against official inflation figures</li>
-            <li>Ran significance testing and regression to detect shrinkflation candidates by vendor</li>
-          </ul>
-        </article>
-
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Reddit Corpus Analysis</h3>
-            <span class="project-date">CMPT 353</span>
-          </div>
-          <p class="project-type">Course Project · PySpark, Pandas, scikit-learn</p>
-          <p>Large-scale analysis of Reddit submission data on the SFU Hadoop cluster, studying what drives
-            post success and whether regional subreddits scale with real-world population.</p>
-          <ul>
-            <li>PySpark extraction pipeline over Hive-partitioned submission/comment data on HDFS</li>
-            <li>Kruskal-Wallis, Mann-Whitney, and a gradient-boosted classifier with per-category stratification</li>
-            <li>Power-law fit of subreddit activity against 2021 census population data</li>
-          </ul>
         </article>
       </div>
     </section>
