@@ -200,7 +200,8 @@ h1 {
 
 .hero-photo {
   position: relative;
-  margin-bottom: 28px;
+  margin: 0 0 28px auto;
+  max-width: 280px;
 }
 .hero-photo img {
   width: 100%;
@@ -211,31 +212,33 @@ h1 {
 }
 .hero-stat-card {
   position: absolute;
-  left: 20px;
-  bottom: -28px;
+  left: 14px;
+  right: 14px;
+  bottom: -24px;
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 8px 12px;
   background: #ffffff;
   border-radius: 10px;
-  padding: 14px 18px;
+  padding: 12px 14px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 .hero-stat-card .stat {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 62px;
 }
 .hero-stat-card .stat strong {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   color: #16161a;
   font-weight: 700;
 }
 .hero-stat-card .stat span {
-  font-size: 0.68rem;
+  font-size: 0.6rem;
   color: #6b6b6b;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  white-space: nowrap;
 }
 
 /* ---------- sections ---------- */
@@ -449,7 +452,7 @@ h1 {
   .about-grid { grid-template-columns: 1fr; }
   .hero { padding: 40px 0 64px; }
   .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-  .hero-photo { max-width: 320px; margin: 0 0 44px; }
+  .hero-photo { max-width: 220px; margin: 0 0 40px; }
   .hero-stat-card {
     gap: 10px;
     padding: 10px 12px;
