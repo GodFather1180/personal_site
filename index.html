@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header dark-band">
     <div class="container header-inner">
       <a href="#top" class="logo">TA<span class="dot">.</span></a>
       <nav class="nav" id="nav">
@@ -23,6 +23,7 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
+        <a href="mailto:tarundeep107@gmail.com" class="header-contact">tarundeep107@gmail.com</a>
         <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">
           <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         </button>
@@ -35,23 +36,33 @@
 
   <main id="top">
     <!-- HERO -->
-    <section class="hero container">
-      <img src="assets/profile.jpg" alt="Tarundeep Arora" class="avatar" width="88" height="88" />
-      <p class="eyebrow">Available for co-op — winter/summer</p>
-      <h1>Hi, I'm Tarundeep Arora.<br />I build full-stack products and dig into data.</h1>
-      <p class="hero-sub">Data Science student at Simon Fraser University, building end-to-end applications with React, Next.js, FastAPI, and Python — from privacy-first mobile-web apps to sensor-driven hardware systems.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="assets/Tarundeep_Arora_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download Résumé</a>
-        <a href="mailto:tarundeep107@gmail.com" class="btn btn-ghost">Get in Touch</a>
-      </div>
-      <div class="hero-links">
-        <a href="https://github.com/GodFather1180" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-        </a>
-        <a href="mailto:tarundeep107@gmail.com" aria-label="Email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-13z"></path><path d="m3.5 5 8.5 7 8.5-7"></path></svg>
-        </a>
+    <section class="hero dark-band">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Available for co-op — winter/summer</p>
+          <h1>I build <span class="accent-text">full-stack products</span> and dig into data.</h1>
+          <p class="hero-sub">Tarundeep Arora — Data Science student at Simon Fraser University, building end-to-end applications with React, Next.js, FastAPI, and Python.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="assets/Tarundeep_Arora_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download Résumé</a>
+          </div>
+          <div class="hero-links">
+            <a href="https://github.com/GodFather1180" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            </a>
+            <a href="mailto:tarundeep107@gmail.com" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-13z"></path><path d="m3.5 5 8.5 7 8.5-7"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/profile.jpg" alt="Tarundeep Arora" width="800" height="800" />
+          <div class="hero-stat-card">
+            <div class="stat"><strong>11</strong><span>Projects shipped</span></div>
+            <div class="stat"><strong>6+</strong><span>Languages</span></div>
+            <div class="stat"><strong>2028</strong><span>SFU Data Science</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
