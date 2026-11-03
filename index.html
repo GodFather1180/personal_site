@@ -3,353 +3,237 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarundeep Arora — Data Science Student &amp; Developer</title>
-  <meta name="description" content="Tarundeep Arora — Data Science student at Simon Fraser University. Full-stack projects in React, Next.js, FastAPI, and Python. Open to co-op opportunities." />
+  <title>Tarundeep Arora — Data Science &amp; Software Projects</title>
+  <meta name="description" content="Tarundeep Arora — Data Science student at Simon Fraser University. Selected projects in data science, statistics and full-stack software engineering. Open to co-op opportunities." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css?v=20260911" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20261102" />
 </head>
 <body>
-  <header class="site-header dark-band">
-    <div class="container header-inner">
-      <a href="#top" class="logo">TA<span class="dot">.</span></a>
-      <nav class="nav" id="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a href="mailto:tarundeep107@gmail.com" class="header-contact">tarundeep107@gmail.com</a>
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">
-          <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+  <div class="page">
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero dark-band">
-      <div class="container hero-content">
-        <img src="assets/profile.jpg" alt="Tarundeep Arora" class="avatar" width="72" height="72" />
-        <p class="eyebrow">Available for co-op — winter/summer</p>
-        <h1>I build <span class="accent-text">full-stack products</span> and dig into data.</h1>
-        <p class="hero-sub">Tarundeep Arora — Data Science student at Simon Fraser University, building end-to-end applications with React, Next.js, FastAPI, and Python.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="assets/Tarundeep_Arora_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download Résumé</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><strong>11</strong><span>Projects shipped</span></div>
-          <div class="stat"><strong>6+</strong><span>Languages</span></div>
-          <div class="stat"><strong>2028</strong><span>SFU Data Science</span></div>
-        </div>
-        <div class="hero-links">
-          <a href="https://github.com/GodFather1180" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-          </a>
-          <a href="mailto:tarundeep107@gmail.com" aria-label="Email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4h15A1.5 1.5 0 0 1 21 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-13z"></path><path d="m3.5 5 8.5 7 8.5-7"></path></svg>
-          </a>
-        </div>
-      </div>
-    </section>
+    <aside class="sidebar">
+      <h1>Tarundeep Arora</h1>
+      <img class="portrait" src="assets/profile.jpg" alt="Tarundeep Arora" width="260" height="260" />
+      <p>Data Science student at Simon Fraser University (B.Sc., 2028), based in the Vancouver area. I build full-stack apps with React, Next.js and FastAPI, and dig into messy real-world data with Python, R, SQL and PySpark.</p>
+      <p>Looking for a co-op term — winter or summer.</p>
+      <p class="side-links">
+        <a href="assets/Tarundeep_Arora_Resume.pdf" target="_blank" rel="noopener">View my résumé</a>
+        <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">GitHub profile</a>
+        <a href="mailto:tarundeep107@gmail.com">tarundeep107@gmail.com</a>
+      </p>
+    </aside>
 
-    <!-- ABOUT -->
-    <section id="about" class="section container">
-      <h2 class="section-title"><span class="tag">01</span> About</h2>
-      <div class="about-grid">
-        <p class="about-text">
-          I'm a Data Science undergrad at Simon Fraser University (2023–2028), based in the Vancouver area.
-          I like building things end-to-end — backend APIs, databases, and the frontends that sit on top of them —
-          and I'm just as comfortable soldering sensors to a breadboard as I am designing a REST API.
-          Recent work spans encrypted local-first apps, containerized services with PostgreSQL, and a chess
-          engine with a custom AI opponent. I'm currently looking for a co-op where I can apply that range on a real team.
+    <main class="content">
+      <h2 class="lead">Selected projects in data science and software engineering</h2>
+      <hr />
+
+      <!-- Shrinkflation -->
+      <article class="project">
+        <h3>Detecting shrinkflation in Canadian grocery prices</h3>
+        <p>Do products get smaller while their price per unit goes up? Using ~70 million scraped price observations from 8 Canadian grocery chains, I built a pipeline that parses package sizes out of free text, matches relaunched products across listings with TF-IDF, and tests the price effect against a control group. I then benchmarked a price index built from the same data against Statistics Canada's Food CPI.</p>
+        <ul>
+          <li>2,214 shrinkflation candidates found. Median price-per-unit change was <strong>+19.0%</strong> versus +0.3% for 49,209 same-size control pairs (Mann–Whitney U, p &lt; 0.001).</li>
+          <li>The effect differs by chain (Kruskal–Wallis, p ≈ 4×10⁻⁷), from +31.5% at Save-On-Foods to about +13% at No Frills and Galleria.</li>
+          <li>Found and corrected 100× pricing errors in 42,578 rows; the pipeline is covered by 78 automated tests.</li>
+          <li>Switching the index from an arithmetic to a geometric (Jevons) mean moved its growth from +13.7% to +1.8%, against +6.5% for official CPI.</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>SciPy</span><span>TF-IDF</span><span>Hypothesis testing</span><span>Regression</span></div>
+        <p class="links">
+          <a href="https://github.com/GodFather1180/CMPT353_Project/tree/main/grocery-project" target="_blank" rel="noopener">View code on GitHub</a>
+          <a href="assets/projects/shrinkflation/Shrinkflation_Report.pdf" target="_blank" rel="noopener">Read the full report (PDF)</a>
         </p>
-        <div class="about-facts">
-          <div class="fact"><span class="fact-label">Location</span><span>North Delta / Burnaby, BC</span></div>
-          <div class="fact"><span class="fact-label">Program</span><span>B.Sc. Data Science, SFU</span></div>
-          <div class="fact"><span class="fact-label">Languages</span><span>English, Hindi, Punjabi, Spanish</span></div>
-          <div class="fact"><span class="fact-label">Focus</span><span>Full-stack &amp; applied data</span></div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section container">
-      <h2 class="section-title"><span class="tag">02</span> Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Languages</h3>
-          <div class="chips">
-            <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Java</span><span>C++</span><span>C</span><span>SQL</span><span>R</span><span>HTML/CSS</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Frameworks</h3>
-          <div class="chips">
-            <span>React</span><span>Next.js</span><span>FastAPI</span><span>Flask</span><span>Tkinter</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Tools &amp; Infra</h3>
-          <div class="chips">
-            <span>Docker</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Git/GitHub</span><span>Raspberry Pi</span><span>VS Code</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Data &amp; Stats</h3>
-          <div class="chips">
-            <span>Pandas</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>PySpark</span><span>Excel</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>CS Foundations</h3>
-          <div class="chips">
-            <span>Data Structures &amp; Algorithms</span><span>Databases</span><span>Software Engineering</span><span>Discrete Math</span><span>Linear Algebra</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3>Design &amp; EE</h3>
-          <div class="chips">
-            <span>SolidWorks</span><span>AutoCAD</span><span>LTspice</span><span>MATLAB</span>
-          </div>
-        </div>
-      </div>
-    </section>
+        <figure>
+          <img src="assets/projects/shrinkflation/shrink_vs_control.png" alt="Histogram and box plot comparing price-per-unit change for shrinkflation candidates and control products" loading="lazy" />
+          <figcaption><strong>Figure 1:</strong> Price-per-unit change for shrinkflation candidates (red) versus same-size control pairs (blue). Left: histogram clipped to −100%…300%. Right: box plot over the full range, showing the heavy tails in scraped data.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/shrinkflation/price_index_vs_cpi.png" alt="Line chart of the scraped-price index against the official StatCan Food CPI" loading="lazy" />
+          <figcaption><strong>Figure 2:</strong> Our scraped-price index (geometric chain) versus StatCan's Food CPI, both rebased to 100. The shaded band is the federal GST/HST holiday, which only shows up in the tax-inclusive CPI.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/shrinkflation/parsed_quantity_distribution.png" alt="Distributions of package sizes parsed from product names, in grams and millilitres" loading="lazy" />
+          <figcaption><strong>Figure 3:</strong> Package sizes parsed out of free-text product names (grams and millilitres, log scale). The regex parser recovers a usable size for 82% of products.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/shrinkflation/raw_vs_cleaned_price.png" alt="Price distribution before and after cleaning on about 69 million rows" loading="lazy" />
+          <figcaption><strong>Figure 4:</strong> Distribution of ~69M scraped prices (log scale) before and after the cleaning step.</figcaption>
+        </figure>
+      </article>
+      <hr />
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section container">
-      <h2 class="section-title"><span class="tag">03</span> Projects</h2>
-      <div class="projects-grid">
+      <!-- Reddit -->
+      <article class="project">
+        <h3>What makes a Reddit post succeed, and do city subreddits scale with population?</h3>
+        <p>A two-part analysis of 2022–2023 Reddit submissions and comments on the SFU Hadoop cluster. Part one models whether a post lands in the top quartile of its own subreddit using timing and title features. Part two joins subreddit activity to 2021 Census populations and fits a power law to see which Canadian cities are busier or quieter than their size predicts.</p>
+        <ul>
+          <li>Spark extraction job over Hive-partitioned HDFS data; an explicit schema and a narrow read path brought the run down to about 37 minutes.</li>
+          <li>Kruskal–Wallis and Mann–Whitney tests plus a gradient-boosted classifier; log–log regression across 24 metro areas with a residual ranking.</li>
+        </ul>
+        <div class="tags"><span>PySpark</span><span>HDFS</span><span>pandas</span><span>scikit-learn</span><span>SciPy</span></div>
+      </article>
+      <hr />
 
-        <article class="project-card featured">
-          <div class="project-head">
-            <h3>Shrinkflation in Canadian Groceries</h3>
-            <span class="project-date">CMPT 353</span>
-          </div>
-          <p class="project-type">Course Project · Python, Pandas, SciPy, scikit-learn</p>
-          <p>A statistical analysis of whether package sizes shrank while prices held or rose across major
-            Canadian grocery chains, benchmarked against StatCan's official food CPI.</p>
-          <ul>
-            <li>Cleaned and joined ~70M scraped price observations (Project Hammer) with StatCan CPI data</li>
-            <li>Built a custom price index and compared it against official inflation figures</li>
-            <li>Ran significance testing and regression to detect shrinkflation candidates by vendor</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/CMPT353_Project/tree/main/grocery-project" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <!-- Self-First -->
+      <article class="project">
+        <h3>Self-First: a privacy-first habit tracker</h3>
+        <p>A local-first habit-tracking app that works fully offline and syncs through end-to-end encrypted cloud storage, so the server never sees plaintext user data.</p>
+        <ul>
+          <li>Account authentication, device linking, and secure JSON export/import and backup.</li>
+          <li>Accessible UI with dark mode and large-text preferences.</li>
+        </ul>
+        <div class="tags"><span>TypeScript</span><span>React</span><span>Next.js</span><span>REST API</span></div>
+      </article>
+      <hr />
 
-        <article class="project-card featured">
-          <div class="project-head">
-            <h3>Reddit Corpus Analysis</h3>
-            <span class="project-date">CMPT 353</span>
-          </div>
-          <p class="project-type">Course Project · PySpark, Pandas, scikit-learn</p>
-          <p>Large-scale analysis of Reddit submission data on the SFU Hadoop cluster, studying what drives
-            post success and whether regional subreddits scale with real-world population.</p>
-          <ul>
-            <li>PySpark extraction pipeline over Hive-partitioned submission/comment data on HDFS</li>
-            <li>Kruskal-Wallis, Mann-Whitney, and a gradient-boosted classifier with per-category stratification</li>
-            <li>Power-law fit of subreddit activity against 2021 census population data</li>
-          </ul>
-        </article>
+      <!-- Daily Dilemma -->
+      <article class="project">
+        <h3>Daily Dilemma: web app and user service</h3>
+        <p>A group project where users answer a daily ethical dilemma and see real-time community results, backed by a dedicated user service with authentication and analytics.</p>
+        <ul>
+          <li>FastAPI backend for game logic, user predictions and majority-outcome computation.</li>
+          <li>User Service API with auth and player tracking; containerized with Docker and PostgreSQL via SQLAlchemy.</li>
+        </ul>
+        <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>SQLAlchemy</span></div>
+      </article>
+      <hr />
 
-        <article class="project-card featured">
-          <div class="project-head">
-            <h3>Self-First</h3>
-            <span class="project-date">Dec 2025</span>
-          </div>
-          <p class="project-type">Personal · TypeScript, React, Next.js, REST API</p>
-          <p>Privacy-first habit tracking app with a local-first architecture for full offline functionality
-            and end-to-end encrypted cloud sync — the server never sees plaintext user data.</p>
-          <ul>
-            <li>Account authentication and device linking</li>
-            <li>Secure JSON export/import and backup</li>
-            <li>Accessible UI with dark mode and large-text preferences</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <!-- LED board -->
+      <article class="project">
+        <h3>LED board: Spotify "now playing" display</h3>
+        <p>Drives a 64×32 RGB LED matrix on a Raspberry Pi. One mode shows album art, a centred title and a scrolling lyric line from Spotify; another is a web-controlled text scroller.</p>
+        <ul>
+          <li>Tick-based smooth scrolling with no blocking I/O in the render loop.</li>
+          <li>Web UI for controlling the scroller from any device on the local network.</li>
+        </ul>
+        <div class="tags"><span>Python</span><span>Raspberry Pi</span><span>Spotify API</span></div>
+        <p class="links"><a href="https://github.com/GodFather1180/led_board" target="_blank" rel="noopener">View code on GitHub</a></p>
+      </article>
+      <hr />
 
-        <article class="project-card featured">
-          <div class="project-head">
-            <h3>Daily Dilemma</h3>
-            <span class="project-date">Oct – Dec 2025</span>
-          </div>
-          <p class="project-type">Group · React, FastAPI, PostgreSQL, Docker</p>
-          <p>Full-stack app where users answer daily ethical dilemmas and see real-time community results,
-            backed by a dedicated user service with authentication and analytics.</p>
-          <ul>
-            <li>FastAPI backend for game logic and majority-outcome computation</li>
-            <li>User Service API with auth and player tracking</li>
-            <li>Containerized with Docker; PostgreSQL via SQLAlchemy</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <!-- Chess -->
+      <article class="project">
+        <h3>Chess in C++</h3>
+        <p>A two-player chess game rendered with SFML: click-to-move input, turn enforcement, per-piece legal move validation, and special moves including castling and en passant.</p>
+        <div class="tags"><span>C++</span><span>SFML</span></div>
+        <p class="links"><a href="https://github.com/GodFather1180/CHESS" target="_blank" rel="noopener">View code on GitHub</a></p>
+      </article>
+      <hr />
 
-        <article class="project-card">
-          <div class="project-head">
-            <h3>LED Board — Spotify Display</h3>
-            <span class="project-date">Personal</span>
-          </div>
-          <p class="project-type">Personal · Python, Raspberry Pi</p>
-          <p>Drives a 64×32 RGB LED matrix on a Raspberry Pi with a Spotify "Now Playing" mode — album art,
-            centered title, and a scrolling lyric line — plus a web-controlled text scroller.</p>
-          <ul>
-            <li>Single-process-per-mode design with smooth, tick-based scrolling</li>
-            <li>No blocking I/O in the render loop</li>
-            <li>Web UI for controlling the scroller remotely over local network</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/led_board" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <!-- Coursework -->
+      <h2 class="section-heading">Machine-learning coursework</h2>
+      <p class="section-note">Outputs from CMPT 353 exercises (Computational Data Science, SFU).</p>
+      <hr />
 
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Chess Game</h3>
-            <span class="project-date">Dec 2024</span>
-          </div>
-          <p class="project-type">Personal · C++</p>
-          <p>A full chess implementation in C++ with Player vs. Player and Player vs. AI modes, featuring
-            a custom AI opponent for strategic, challenging gameplay.</p>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/CHESS" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <article class="project">
+        <h3>Naming colours: classifying RGB values into colour words</h3>
+        <p>Trained and compared Gaussian naive Bayes, k-nearest-neighbours and random-forest classifiers on labelled RGB samples, with and without LAB and HSV colour-space transforms. A random forest on HSV features scored best, at 74.2% validation accuracy.</p>
+        <div class="tags"><span>Python</span><span>scikit-learn</span><span>scikit-image</span></div>
+        <figure>
+          <img src="assets/projects/coursework/colour_classifier_random_forest_hsv.png" alt="Predicted colour-name regions for a random forest on HSV features" loading="lazy" />
+          <figcaption><strong>Figure 1:</strong> Colour names predicted across the LAB A/B plane at L=67 by the random forest on HSV features. It carves out narrow brown and yellow regions.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/projects/coursework/colour_classifier_naive_bayes_rgb.png" alt="Predicted colour-name regions for Gaussian naive Bayes on raw RGB" loading="lazy" />
+          <figcaption><strong>Figure 2:</strong> The same slice for Gaussian naive Bayes on raw RGB, which uses smooth Gaussian boundaries and misses those regions.</figcaption>
+        </figure>
+      </article>
+      <hr />
 
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Weather App</h3>
-            <span class="project-date">Sept 2024</span>
-          </div>
-          <p class="project-type">Personal · Java, HTML, CSS, JavaScript</p>
-          <p>A responsive weather app pulling real-time API data into a dynamic frontend, with local
-            storage caching to cut redundant API calls and speed up repeat visits.</p>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/weather-app" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <article class="project">
+        <h3>Clustering cities by their weather</h3>
+        <p>Projected monthly temperature and precipitation data onto two principal components and grouped it with k-means (k = 9). A companion classifier that predicts the city from its weather mostly confused cities with similar climates, such as Seattle and Portland or Victoria and Vancouver.</p>
+        <div class="tags"><span>Python</span><span>scikit-learn</span><span>PCA</span><span>k-means</span></div>
+        <figure>
+          <img src="assets/projects/coursework/weather_clusters_kmeans.png" alt="Scatter plot of weather data in two principal components, coloured by k-means cluster" loading="lazy" />
+          <figcaption><strong>Figure 3:</strong> K-means clusters of monthly weather data in the first two principal components.</figcaption>
+        </figure>
+      </article>
+      <hr />
 
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Currency Converter</h3>
-            <span class="project-date">Personal</span>
-          </div>
-          <p class="project-type">Personal · Python, Tkinter, REST API</p>
-          <p>A desktop currency converter with a Tkinter GUI, converting between currencies in real time
-            via a live exchange-rate API.</p>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/Currency-Converter" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <!-- More projects -->
+      <h2 class="section-heading">More projects</h2>
+      <hr />
 
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Graphing Calculator</h3>
-            <span class="project-date">Personal</span>
-          </div>
-          <p class="project-type">Personal · Python, PySimpleGUI</p>
-          <p>A TI-83-style graphing calculator built with a custom GUI, supporting both standard math
-            evaluation and function graphing with trig, exponents, and expression parsing.</p>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/Graphing-Calculator-" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <article class="project compact">
+        <h3>Automated planter box</h3>
+        <p>Team project for SFU's ENSC 100W. A Flask app on a Raspberry Pi reads soil-moisture and reservoir sensors, waters automatically below a configurable threshold, and extends a motorized shade for rain and snow, with manual override from a web dashboard.</p>
+        <div class="tags"><span>Python</span><span>Flask</span><span>Raspberry Pi</span><span>JavaScript</span></div>
+        <p class="links"><a href="https://github.com/GodFather1180/planter-box" target="_blank" rel="noopener">View code on GitHub</a></p>
+      </article>
+      <hr />
+      <article class="project compact">
+        <h3>Weather app</h3>
+        <p>A responsive weather app that pulls live data for any city, with local-storage caching to cut redundant API calls.</p>
+        <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>OpenWeatherMap API</span></div>
+        <p class="links"><a href="https://github.com/GodFather1180/weather-app" target="_blank" rel="noopener">View code on GitHub</a></p>
+      </article>
+      <hr />
+      <article class="project compact">
+        <h3>Currency converter</h3>
+        <p>A desktop converter between CAD, USD, EUR, INR and BRL using live exchange rates.</p>
+        <div class="tags"><span>Python</span><span>Tkinter</span><span>REST API</span></div>
+        <p class="links"><a href="https://github.com/GodFather1180/Currency-Converter" target="_blank" rel="noopener">View code on GitHub</a></p>
+      </article>
+      <hr />
+      <article class="project compact">
+        <h3>Graphing calculator</h3>
+        <p>A TI-83-style calculator with a custom GUI: expression entry with trig and exponents, plus function graphing drawn on a canvas.</p>
+        <div class="tags"><span>Python</span><span>PySimpleGUI</span><span>turtle</span></div>
+        <p class="links"><a href="https://github.com/GodFather1180/Graphing-Calculator-" target="_blank" rel="noopener">View code on GitHub</a></p>
+      </article>
+      <hr />
+      <article class="project compact">
+        <h3>Desktop music player</h3>
+        <p>An mp3 player with play, pause, stop and skip controls over a local folder of songs.</p>
+        <div class="tags"><span>Python</span><span>Tkinter</span><span>pygame</span></div>
+        <p class="links"><a href="https://github.com/GodFather1180/MusicPlayer" target="_blank" rel="noopener">View code on GitHub</a></p>
+      </article>
+      <hr />
 
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Desktop Music Player</h3>
-            <span class="project-date">Personal</span>
-          </div>
-          <p class="project-type">Personal · Python, Tkinter</p>
-          <p>A desktop music player with a custom GUI — play, pause, stop, and skip controls for local
-            audio files.</p>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/MusicPlayer" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
+      <!-- Skills -->
+      <h2 class="section-heading">Skills</h2>
+      <hr />
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd class="tags"><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Java</span><span>C++</span><span>C</span><span>SQL</span><span>R</span><span>HTML/CSS</span></dd>
+        <dt>Frameworks</dt>
+        <dd class="tags"><span>React</span><span>Next.js</span><span>FastAPI</span><span>Flask</span><span>Tkinter</span></dd>
+        <dt>Tools</dt>
+        <dd class="tags"><span>Docker</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Git/GitHub</span><span>Raspberry Pi</span></dd>
+        <dt>Data &amp; stats</dt>
+        <dd class="tags"><span>pandas</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>PySpark</span><span>Excel</span></dd>
+        <dt>CS foundations</dt>
+        <dd class="tags"><span>Data structures &amp; algorithms</span><span>Databases</span><span>Software engineering</span><span>Discrete math</span><span>Linear algebra</span></dd>
+        <dt>Design &amp; EE</dt>
+        <dd class="tags"><span>SolidWorks</span><span>AutoCAD</span><span>LTspice</span><span>MATLAB</span></dd>
+      </dl>
+      <hr />
 
-        <article class="project-card">
-          <div class="project-head">
-            <h3>Automated Planter Box</h3>
-            <span class="project-date">Sept – Dec 2024</span>
-          </div>
-          <p class="project-type">Group · Sensors, Arduino, Mechanical Design</p>
-          <p>An automated irrigation system that monitors soil moisture and activates drip irrigation
-            accordingly, with a motorized roof for rain/snow protection and manual override.</p>
-          <div class="project-links">
-            <a href="https://github.com/GodFather1180/planter-box" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
-        </article>
-      </div>
-    </section>
+      <!-- Education / experience -->
+      <h2 class="section-heading">Education &amp; experience</h2>
+      <hr />
+      <article class="project compact">
+        <h3>B.Sc. Data Science, Simon Fraser University</h3>
+        <p class="meta">Sept 2023 – 2028 · Burnaby, BC</p>
+      </article>
+      <hr />
+      <article class="project compact">
+        <h3>Receptionist, Fortune Law</h3>
+        <p class="meta">Jun 2022 – Jan 2023</p>
+        <p>Managed client records and spreadsheets, handled phone inquiries and appointment scheduling, and supported legal document filing.</p>
+      </article>
 
-    <!-- EXPERIENCE / EDUCATION -->
-    <section id="experience" class="section container">
-      <h2 class="section-title"><span class="tag">04</span> Experience &amp; Education</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>B.Sc. Data Science</h3>
-              <span class="timeline-date">Sept 2023 – 2028</span>
-            </div>
-            <p class="timeline-sub">Simon Fraser University — Burnaby, BC</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-head">
-              <h3>Receptionist</h3>
-              <span class="timeline-date">Jun 2022 – Jan 2023</span>
-            </div>
-            <p class="timeline-sub">Fortune Law</p>
-            <p>Managed client records and spreadsheets, handled phone inquiries and appointment scheduling,
-              and provided administrative support including file handling for legal documents.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <footer>
+        <a href="mailto:tarundeep107@gmail.com">tarundeep107@gmail.com</a>
+        <span>·</span>
+        <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">github.com/GodFather1180</a>
+      </footer>
+    </main>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section container contact-section">
-      <h2 class="section-title"><span class="tag">05</span> Contact</h2>
-      <p class="contact-lead">Looking for a co-op student who can jump into full-stack work or data projects? I'd love to hear from you.</p>
-      <div class="contact-cards">
-        <a class="contact-card" href="mailto:tarundeep107@gmail.com">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">tarundeep107@gmail.com</span>
-        </a>
-        <a class="contact-card" href="https://github.com/GodFather1180" target="_blank" rel="noopener">
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">github.com/GodFather1180</span>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Tarundeep Arora. Built from scratch.</p>
-      <a href="#top">Back to top ↑</a>
-    </div>
-  </footer>
-
-  <script src="script.js?v=20260911"></script>
+  </div>
 </body>
 </html>
