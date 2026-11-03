@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261102" />
+  <link rel="stylesheet" href="styles.css?v=20261103" />
 </head>
 <body>
   <div class="page">
@@ -68,36 +68,40 @@
       <!-- Reddit -->
       <article class="project">
         <h3>What makes a Reddit post succeed, and do city subreddits scale with population?</h3>
-        <p>A two-part analysis of 2022–2023 Reddit submissions and comments on the SFU Hadoop cluster. Part one models whether a post lands in the top quartile of its own subreddit using timing and title features. Part two joins subreddit activity to 2021 Census populations and fits a power law to see which Canadian cities are busier or quieter than their size predicts.</p>
+        <p>A two-part analysis of 2022–2023 Reddit data on the SFU Hadoop cluster. Part one models what makes a post succeed from timing and title features. Part two joins subreddit activity to 2021 Census populations and fits a power law to see which Canadian cities are busier or quieter than their size predicts.</p>
         <ul>
-          <li>Spark extraction job over Hive-partitioned HDFS data; an explicit schema and a narrow read path brought the run down to about 37 minutes.</li>
-          <li>Kruskal–Wallis and Mann–Whitney tests plus a gradient-boosted classifier; log–log regression across 24 metro areas with a residual ranking.</li>
+          <li>PySpark pipeline on HDFS that reduced 18M Reddit records (150 subreddits) to 2M observations; an explicit schema and a narrow read path brought extraction down to about 37 minutes.</li>
+          <li>Scores differ by subreddit (Kruskal–Wallis) and weekday comments run higher (Mann–Whitney U), both p &lt; 0.001.</li>
+          <li>Gradient-boosted classifier for above-median engagement: <strong>82% accuracy, 0.80 F1, 0.87 AUC</strong>. Top predictors were subreddit size, posting time, title length and early engagement.</li>
+          <li>Power-law fit of regional subreddit activity against population: exponent ≈ 0.85, R² ≈ 0.78.</li>
         </ul>
-        <div class="tags"><span>PySpark</span><span>HDFS</span><span>pandas</span><span>scikit-learn</span><span>SciPy</span></div>
+        <div class="tags"><span>PySpark</span><span>Hadoop/HDFS</span><span>pandas</span><span>scikit-learn</span><span>SciPy</span></div>
       </article>
       <hr />
 
-      <!-- Self-First -->
+      <!-- Health First -->
       <article class="project">
-        <h3>Self-First: a privacy-first habit tracker</h3>
-        <p>A local-first habit-tracking app that works fully offline and syncs through end-to-end encrypted cloud storage, so the server never sees plaintext user data.</p>
+        <h3>Health First: a local-first habit tracker</h3>
+        <p>A habit-tracking app that works fully offline and backs up to the cloud, with 10 screens including daily goals, mood tracking, daily wins and a "Bad Day Mode".</p>
         <ul>
-          <li>Account authentication, device linking, and secure JSON export/import and backup.</li>
-          <li>Accessible UI with dark mode and large-text preferences.</li>
+          <li>IndexedDB for full offline use, with partial-completion tracking plus dark mode and large-text options.</li>
+          <li>Next.js and Prisma REST routes on PostgreSQL for registration, login, device linking and cloud backup.</li>
+          <li>Accounts secured with bcryptjs password hashing and JWT authentication stored in HTTP-only cookies.</li>
         </ul>
-        <div class="tags"><span>TypeScript</span><span>React</span><span>Next.js</span><span>REST API</span></div>
+        <div class="tags"><span>TypeScript</span><span>React</span><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span><span>IndexedDB</span></div>
       </article>
       <hr />
 
       <!-- Daily Dilemma -->
       <article class="project">
         <h3>Daily Dilemma: web app and user service</h3>
-        <p>A group project where users answer a daily ethical dilemma and see real-time community results, backed by a dedicated user service with authentication and analytics.</p>
+        <p>A group project where users answer a daily ethical dilemma and see real-time community results, backed by a user service with authentication and analytics.</p>
         <ul>
-          <li>FastAPI backend for game logic, user predictions and majority-outcome computation.</li>
-          <li>User Service API with auth and player tracking; containerized with Docker and PostgreSQL via SQLAlchemy.</li>
+          <li>Led the backend: 15 FastAPI and PostgreSQL REST endpoints with JWT authentication, plus analytics across 5 metrics including prediction accuracy, participation history and majority alignment.</li>
+          <li>Built the React components and frontend–backend integration for 3 game modes (Prediction, Opinion and Party), with community results refreshed by 5-second polling.</li>
+          <li>Wrote 100 PyTest tests (96%+ coverage) and deployed with Docker Compose on Render for 50+ users and 500+ votes.</li>
         </ul>
-        <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>SQLAlchemy</span></div>
+        <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>PyTest</span><span>JWT</span></div>
       </article>
       <hr />
 
@@ -199,17 +203,15 @@
       <hr />
       <dl class="skills">
         <dt>Languages</dt>
-        <dd class="tags"><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Java</span><span>C++</span><span>C</span><span>SQL</span><span>R</span><span>HTML/CSS</span></dd>
-        <dt>Frameworks</dt>
-        <dd class="tags"><span>React</span><span>Next.js</span><span>FastAPI</span><span>Flask</span><span>Tkinter</span></dd>
-        <dt>Tools</dt>
-        <dd class="tags"><span>Docker</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Git/GitHub</span><span>Raspberry Pi</span></dd>
-        <dt>Data &amp; stats</dt>
-        <dd class="tags"><span>pandas</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>PySpark</span><span>Excel</span></dd>
-        <dt>CS foundations</dt>
-        <dd class="tags"><span>Data structures &amp; algorithms</span><span>Databases</span><span>Software engineering</span><span>Discrete math</span><span>Linear algebra</span></dd>
-        <dt>Design &amp; EE</dt>
-        <dd class="tags"><span>SolidWorks</span><span>AutoCAD</span><span>LTspice</span><span>MATLAB</span></dd>
+        <dd class="tags"><span>Python</span><span>SQL</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C++</span><span>R</span></dd>
+        <dt>Data &amp; ML</dt>
+        <dd class="tags"><span>pandas</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>PySpark</span><span>Hadoop/HDFS</span><span>Hypothesis testing</span><span>Regression</span><span>TF-IDF</span></dd>
+        <dt>Web &amp; backend</dt>
+        <dd class="tags"><span>React</span><span>Next.js</span><span>FastAPI</span><span>REST APIs</span><span>JWT authentication</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Prisma</span></dd>
+        <dt>Tools &amp; DevOps</dt>
+        <dd class="tags"><span>Docker</span><span>Docker Compose</span><span>Git/GitHub</span><span>PyTest</span><span>Render</span><span>Linux</span></dd>
+        <dt>Spoken languages</dt>
+        <dd class="tags"><span>English (fluent)</span><span>Hindi (fluent)</span><span>Punjabi (native)</span><span>Spanish (intermediate)</span></dd>
       </dl>
       <hr />
 
@@ -219,12 +221,13 @@
       <article class="project compact">
         <h3>B.Sc. Data Science, Simon Fraser University</h3>
         <p class="meta">Sept 2023 – 2028 · Burnaby, BC</p>
+        <p>Coursework: Computational Data Science, Data Structures and Algorithms, Databases, Software Engineering, Linear Algebra.</p>
       </article>
       <hr />
       <article class="project compact">
-        <h3>Receptionist, Fortune Law</h3>
+        <h3>Data Analyst, Fortune Law</h3>
         <p class="meta">Jun 2022 – Jan 2023</p>
-        <p>Managed client records and spreadsheets, handled phone inquiries and appointment scheduling, and supported legal document filing.</p>
+        <p>Maintained and updated client records and Excel spreadsheets, keeping information organized and accessible for day-to-day operations. Reviewed records for missing or inconsistent information and corrected them to maintain data accuracy.</p>
       </article>
 
       <footer>
