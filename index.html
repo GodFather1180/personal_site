@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261111" />
+  <link rel="stylesheet" href="styles.css?v=20261112" />
 </head>
 <body>
   <div class="page">
@@ -34,9 +34,14 @@
       <p class="email"><a href="mailto:tarundeep107@gmail.com">tarundeep107@gmail.com</a></p>
 
       <nav class="nav" aria-label="Sections">
-        <a href="#featured">Featured projects</a>
-        <a href="#coursework">ML coursework</a>
-        <a href="#more">More projects</a>
+        <a href="#data-science">Data science</a>
+        <a class="sub" href="#shrinkflation">Shrinkflation</a>
+        <a class="sub" href="#reddit">Reddit analysis</a>
+        <a class="sub" href="#coursework">ML coursework</a>
+        <a href="#software">Software engineering</a>
+        <a class="sub" href="#daily-dilemma">Daily Dilemma</a>
+        <a class="sub" href="#health-first">Health First</a>
+        <a class="sub" href="#more">Smaller projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Education &amp; experience</a>
       </nav>
@@ -44,14 +49,14 @@
 
     <main class="content">
 
-      <!-- ===== Featured ===== -->
-      <section id="featured">
+      <!-- ===== Data science ===== -->
+      <section id="data-science">
         <header class="section-head">
-          <h2>Featured projects</h2>
-          <p>Data science and software engineering work, with code and results.</p>
+          <h2>Data science</h2>
+          <p>Statistics, machine learning and large-scale data processing.</p>
         </header>
 
-        <article class="project">
+        <article class="project" id="shrinkflation">
           <p class="kicker">Course project · CMPT 353 · Aug 2026</p>
           <h3>Detecting shrinkflation in Canadian grocery prices</h3>
           <p>Do products get smaller while their price per unit goes up? Using ~70 million scraped price observations from 8 Canadian grocery chains, I built a pipeline that parses package sizes out of free text, matches relaunched products across listings with TF-IDF, and tests the price effect against a control group. I then benchmarked a price index built from the same data against Statistics Canada's Food CPI.</p>
@@ -94,7 +99,7 @@
           </div>
         </article>
 
-        <article class="project">
+        <article class="project" id="reddit">
           <p class="kicker">Course project · CMPT 353 · Jul 2026</p>
           <h3>What makes a Reddit post succeed, and do city subreddits scale with population?</h3>
           <p>A two-part analysis of 2022–2023 Reddit data on the SFU Hadoop cluster. Part one models what makes a post succeed from timing and title features. Part two joins subreddit activity to 2021 Census populations and fits a power law to see which Canadian cities are busier or quieter than their size predicts.</p>
@@ -108,67 +113,11 @@
           <p class="links"><a class="btn" href="https://github.com/GodFather1180/reddit-data-analysis-pyspark" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
         </article>
 
-        <article class="project">
-          <p class="kicker">Group project · CMPT 276 · Oct – Dec 2025</p>
-          <h3>Daily Dilemma: web app and user service</h3>
-          <p>A group project where users answer a daily ethical dilemma and see real-time community results, backed by a user service with authentication and analytics.</p>
-
-          <div class="stats">
-            <div><strong>15</strong><span>FastAPI + PostgreSQL REST endpoints</span></div>
-            <div><strong>100</strong><span>PyTest tests, 96%+ coverage</span></div>
-            <div><strong>50+</strong><span>users and 500+ votes once deployed</span></div>
-            <div><strong>3</strong><span>game modes</span></div>
-          </div>
-
-          <ul>
-            <li>Led the backend: JWT authentication and analytics across 5 metrics including prediction accuracy, participation history and majority alignment.</li>
-            <li>Built the React components and frontend–backend integration for 3 game modes (Prediction, Opinion and Party), with community results refreshed by 5-second polling.</li>
-            <li>Deployed with Docker Compose on Render.</li>
-          </ul>
-          <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>PyTest</span><span>JWT</span></div>
-          <p class="links"><a class="btn" href="https://github.com/GodFather1180/Daily-Dilemma" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
-        </article>
-
-        <article class="project">
-          <p class="kicker">Personal project · Dec 2025</p>
-          <h3>Health First: a local-first habit tracker</h3>
-          <p>A gentle self-care app that works fully offline and backs up to the cloud, with 10 screens including daily goals, mood tracking, daily wins and a "Bad Day Mode", plus a supportive AI chat companion.</p>
-          <ul>
-            <li>IndexedDB for full offline use, with partial-completion tracking plus dark mode and large-text options.</li>
-            <li>Next.js and Prisma REST routes on PostgreSQL for registration, login, device linking and cloud backup.</li>
-            <li>Accounts secured with bcryptjs password hashing and JWT authentication stored in HTTP-only cookies.</li>
-          </ul>
-          <div class="tags"><span>TypeScript</span><span>React</span><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span><span>IndexedDB</span></div>
-          <p class="links"><a class="btn" href="https://github.com/GodFather1180/Health-First" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
-        </article>
-
-        <article class="project">
-          <p class="kicker">Personal project</p>
-          <h3>LED board: Spotify "now playing" display</h3>
-          <p>Drives a 64×32 RGB LED matrix on a Raspberry Pi. One mode shows album art, a centred title and a scrolling lyric line from Spotify; another is a web-controlled text scroller.</p>
-          <ul>
-            <li>Tick-based smooth scrolling with no blocking I/O in the render loop.</li>
-            <li>Web UI for controlling the scroller from any device on the local network.</li>
-          </ul>
-          <div class="tags"><span>Python</span><span>Raspberry Pi</span><span>Spotify API</span></div>
-          <p class="links"><a class="btn" href="https://github.com/GodFather1180/led_board" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
-        </article>
-
-        <article class="project">
-          <p class="kicker">Personal project</p>
-          <h3>Chess in C++</h3>
-          <p>A two-player chess game rendered with SFML: click-to-move input, turn enforcement, per-piece legal move validation, and special moves including castling and en passant.</p>
-          <div class="tags"><span>C++</span><span>SFML</span></div>
-          <p class="links"><a class="btn" href="https://github.com/GodFather1180/CHESS" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
-        </article>
-      </section>
-
-      <!-- ===== Coursework ===== -->
-      <section id="coursework">
-        <header class="section-head">
-          <h2>Machine-learning coursework</h2>
-          <p>Outputs from CMPT 353 exercises (Computational Data Science, SFU).</p>
-        </header>
+        <div id="coursework" class="subsection">
+          <header class="sub-head">
+            <h3>Machine-learning coursework</h3>
+            <p>Outputs from CMPT 353 exercises (Computational Data Science, SFU).</p>
+          </header>
 
         <article class="project">
           <h3>Naming colours: classifying RGB values into colour words</h3>
@@ -195,13 +144,74 @@
             <figcaption><strong>K-means clusters</strong> of monthly weather data in the first two principal components.</figcaption>
           </figure>
         </article>
+        </div>
       </section>
 
-      <!-- ===== More projects ===== -->
-      <section id="more">
+      <!-- ===== Software engineering ===== -->
+      <section id="software">
         <header class="section-head">
-          <h2>More projects</h2>
+          <h2>Software engineering</h2>
+          <p>Full-stack apps, backends and hardware projects.</p>
         </header>
+
+        <article class="project" id="daily-dilemma">
+          <p class="kicker">Group project · CMPT 276 · Oct – Dec 2025</p>
+          <h3>Daily Dilemma: web app and user service</h3>
+          <p>A group project where users answer a daily ethical dilemma and see real-time community results, backed by a user service with authentication and analytics.</p>
+
+          <div class="stats">
+            <div><strong>15</strong><span>FastAPI + PostgreSQL REST endpoints</span></div>
+            <div><strong>100</strong><span>PyTest tests, 96%+ coverage</span></div>
+            <div><strong>50+</strong><span>users and 500+ votes once deployed</span></div>
+            <div><strong>3</strong><span>game modes</span></div>
+          </div>
+
+          <ul>
+            <li>Led the backend: JWT authentication and analytics across 5 metrics including prediction accuracy, participation history and majority alignment.</li>
+            <li>Built the React components and frontend–backend integration for 3 game modes (Prediction, Opinion and Party), with community results refreshed by 5-second polling.</li>
+            <li>Deployed with Docker Compose on Render.</li>
+          </ul>
+          <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>PyTest</span><span>JWT</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/Daily-Dilemma" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
+
+        <article class="project" id="health-first">
+          <p class="kicker">Personal project · Dec 2025</p>
+          <h3>Health First: a local-first habit tracker</h3>
+          <p>A gentle self-care app that works fully offline and backs up to the cloud, with 10 screens including daily goals, mood tracking, daily wins and a "Bad Day Mode", plus a supportive AI chat companion.</p>
+          <ul>
+            <li>IndexedDB for full offline use, with partial-completion tracking plus dark mode and large-text options.</li>
+            <li>Next.js and Prisma REST routes on PostgreSQL for registration, login, device linking and cloud backup.</li>
+            <li>Accounts secured with bcryptjs password hashing and JWT authentication stored in HTTP-only cookies.</li>
+          </ul>
+          <div class="tags"><span>TypeScript</span><span>React</span><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span><span>IndexedDB</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/Health-First" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
+
+        <article class="project" id="led-board">
+          <p class="kicker">Personal project</p>
+          <h3>LED board: Spotify "now playing" display</h3>
+          <p>Drives a 64×32 RGB LED matrix on a Raspberry Pi. One mode shows album art, a centred title and a scrolling lyric line from Spotify; another is a web-controlled text scroller.</p>
+          <ul>
+            <li>Tick-based smooth scrolling with no blocking I/O in the render loop.</li>
+            <li>Web UI for controlling the scroller from any device on the local network.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Raspberry Pi</span><span>Spotify API</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/led_board" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
+
+        <article class="project" id="chess">
+          <p class="kicker">Personal project</p>
+          <h3>Chess in C++</h3>
+          <p>A two-player chess game rendered with SFML: click-to-move input, turn enforcement, per-piece legal move validation, and special moves including castling and en passant.</p>
+          <div class="tags"><span>C++</span><span>SFML</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/CHESS" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
+
+        <div id="more" class="subsection">
+          <header class="sub-head">
+            <h3>Smaller projects</h3>
+          </header>
         <div class="cards">
           <article class="card">
             <h3>Automated planter box</h3>
@@ -233,6 +243,7 @@
             <div class="tags"><span>Python</span><span>Tkinter</span><span>pygame</span></div>
             <a class="more-link" href="https://github.com/GodFather1180/MusicPlayer" target="_blank" rel="noopener">Code on GitHub ↗</a>
           </article>
+        </div>
         </div>
       </section>
 
@@ -294,19 +305,26 @@
   <script>
     (function () {
       var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
-      if (!('IntersectionObserver' in window) || !links.length) return;
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          links.forEach(function (l) {
-            l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
-          });
+      var targets = links.map(function (l) { return document.querySelector(l.getAttribute('href')); });
+      var ticking = false;
+      function update() {
+        var line = window.innerHeight * 0.3, current = 0;
+        targets.forEach(function (t, i) {
+          if (t && t.getBoundingClientRect().top <= line) current = i;
         });
-      }, { rootMargin: '-30% 0px -60% 0px' });
-      links.forEach(function (l) {
-        var s = document.querySelector(l.getAttribute('href'));
-        if (s) io.observe(s);
-      });
+        var group = current;
+        while (group > 0 && links[group].classList.contains('sub')) group--;
+        links.forEach(function (l, i) {
+          l.classList.toggle('active', i === current);
+          l.classList.toggle('group', i === group && i !== current);
+        });
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(update); }
+      }, { passive: true });
+      window.addEventListener('resize', update);
+      update();
     })();
   </script>
 </body>

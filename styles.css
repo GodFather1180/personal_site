@@ -117,9 +117,19 @@ h1, h2, h3, p, ul, dl, figure { margin: 0; }
 }
 .nav a:hover { color: var(--ink); text-decoration: none; }
 .nav a.active { color: var(--ink); font-weight: 600; border-left-color: var(--accent); }
+.nav a:not(.sub) { margin-top: 8px; color: var(--ink); font-weight: 500; }
+.nav a:not(.sub):first-child { margin-top: 0; }
+.nav a.sub { padding-left: 26px; font-size: 13px; }
+.nav a.active { font-weight: 600; }
+.nav a.group { font-weight: 600; }
 
-@media (min-width: 901px) and (min-height: 900px) {
-  .sidebar { position: sticky; top: 48px; align-self: start; }
+/* menu stays in view on any height; the whole sidebar pins when the screen is tall enough */
+@media (min-width: 901px) {
+  .nav { position: sticky; top: 32px; }
+}
+@media (min-width: 901px) and (min-height: 960px) {
+  .sidebar { position: sticky; top: 40px; align-self: start; }
+  .nav { position: static; }
 }
 
 /* ---------- sections ---------- */
@@ -137,6 +147,16 @@ section + section { margin-top: 84px; }
   color: var(--ink);
 }
 .section-head p { margin-top: 4px; font-size: 14px; color: var(--muted); }
+
+/* ---------- sub-sections ---------- */
+.subsection { margin-top: 72px; }
+.sub-head {
+  margin-bottom: 26px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+}
+.sub-head h3 { font-size: 1.1rem; line-height: 1.3; color: var(--ink); }
+.sub-head p { margin-top: 3px; font-size: 13.5px; color: var(--muted); }
 
 /* ---------- projects ---------- */
 .project + .project {
@@ -311,7 +331,9 @@ footer span { margin: 0 6px; }
   .portrait { width: 104px; }
   .id h1 { margin-top: 0; font-size: 1.5rem; }
   .nav { flex-direction: row; flex-wrap: wrap; gap: 4px 18px; border-top: 0; padding-top: 0; margin-top: 24px; }
-  .nav a { padding: 2px 0; border-left: 0; }
+  .nav a, .nav a.sub { padding: 2px 0; border-left: 0; margin-top: 0; font-size: 13.5px; }
+  .nav a:not(.sub) { margin-top: 0; }
+  .nav a.sub { display: none; }
   .nav a.active { border-left: 0; text-decoration: underline; text-underline-offset: 4px; }
   section + section { margin-top: 64px; }
 }
