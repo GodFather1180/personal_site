@@ -9,230 +9,276 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261109" />
+  <link rel="stylesheet" href="styles.css?v=20261111" />
 </head>
 <body>
   <div class="page">
 
     <aside class="sidebar">
-      <h1>Tarundeep Arora</h1>
-      <img class="portrait" src="assets/profile.jpg?v=20261105" alt="Tarundeep Arora" width="260" height="260" />
-      <p>Data Science student at Simon Fraser University (B.Sc., 2028), based in the Vancouver area. I build full-stack apps with React, Next.js and FastAPI, and dig into messy real-world data with Python, R, SQL and PySpark.</p>
-      <p>Looking for a co-op term — winter or summer.</p>
-      <p class="side-links">
-        <a href="assets/Tarundeep_Arora_Resume.pdf" target="_blank" rel="noopener">View my résumé</a>
-        <a href="https://github.com/GodFather1180" target="_blank" rel="noopener">GitHub profile</a>
-        <a href="https://www.linkedin.com/in/tarun-arorra/" target="_blank" rel="noopener">LinkedIn profile</a>
-        <a href="mailto:tarundeep107@gmail.com">tarundeep107@gmail.com</a>
-      </p>
+      <div class="id">
+        <img class="portrait" src="assets/profile.jpg?v=20261105" alt="Tarundeep Arora" width="240" height="240" />
+        <div>
+          <h1>Tarundeep Arora</h1>
+          <p class="role">Data Science · Simon Fraser University</p>
+        </div>
+      </div>
+
+      <p class="bio">Data Science student (B.Sc., 2028) based in the Vancouver area. I build full-stack apps with React, Next.js and FastAPI, and dig into messy real-world data with Python, R, SQL and PySpark.</p>
+      <p class="status"><span class="dot" aria-hidden="true"></span>Looking for a co-op term · winter or summer</p>
+
+      <div class="actions">
+        <a class="btn primary" href="assets/Tarundeep_Arora_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <a class="btn" href="https://github.com/GodFather1180" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/tarun-arorra/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="email"><a href="mailto:tarundeep107@gmail.com">tarundeep107@gmail.com</a></p>
+
+      <nav class="nav" aria-label="Sections">
+        <a href="#featured">Featured projects</a>
+        <a href="#coursework">ML coursework</a>
+        <a href="#more">More projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Education &amp; experience</a>
+      </nav>
     </aside>
 
     <main class="content">
-      <h2 class="lead">Selected projects in data science and software engineering</h2>
-      <hr />
 
-      <!-- Shrinkflation -->
-      <article class="project">
-        <h3>Detecting shrinkflation in Canadian grocery prices</h3>
-        <p>Do products get smaller while their price per unit goes up? Using ~70 million scraped price observations from 8 Canadian grocery chains, I built a pipeline that parses package sizes out of free text, matches relaunched products across listings with TF-IDF, and tests the price effect against a control group. I then benchmarked a price index built from the same data against Statistics Canada's Food CPI.</p>
-        <ul>
-          <li>2,214 shrinkflation candidates found. Median price-per-unit change was <strong>+19.0%</strong> versus +0.3% for 49,209 same-size control pairs (Mann–Whitney U, p &lt; 0.001).</li>
-          <li>The effect differs by chain (Kruskal–Wallis, p ≈ 4×10⁻⁷), from +31.5% at Save-On-Foods to about +13% at No Frills and Galleria.</li>
-          <li>Found and corrected 100× pricing errors in 42,578 rows; the pipeline is covered by 78 automated tests.</li>
-          <li>Switching the index from an arithmetic to a geometric (Jevons) mean moved its growth from +13.7% to +1.8%, against +6.5% for official CPI.</li>
-        </ul>
-        <div class="tags"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>SciPy</span><span>TF-IDF</span><span>Hypothesis testing</span><span>Regression</span></div>
-        <p class="links">
-          <a href="https://github.com/GodFather1180/CMPT353_Project/tree/main/grocery-project" target="_blank" rel="noopener">View code on GitHub</a>
-          <a href="assets/projects/shrinkflation/Shrinkflation_Report.pdf" target="_blank" rel="noopener">Read the full report (PDF)</a>
-        </p>
+      <!-- ===== Featured ===== -->
+      <section id="featured">
+        <header class="section-head">
+          <h2>Featured projects</h2>
+          <p>Data science and software engineering work, with code and results.</p>
+        </header>
 
-        <figure>
-          <img src="assets/projects/shrinkflation/shrink_vs_control.png" alt="Histogram and box plot comparing price-per-unit change for shrinkflation candidates and control products" loading="lazy" />
-          <figcaption><strong>Figure 1:</strong> Price-per-unit change for shrinkflation candidates (red) versus same-size control pairs (blue). Left: histogram clipped to −100%…300%. Right: box plot over the full range, showing the heavy tails in scraped data.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/projects/shrinkflation/price_index_vs_cpi.png" alt="Line chart of the scraped-price index against the official StatCan Food CPI" loading="lazy" />
-          <figcaption><strong>Figure 2:</strong> Our scraped-price index (geometric chain) versus StatCan's Food CPI, both rebased to 100. The shaded band is the federal GST/HST holiday, which only shows up in the tax-inclusive CPI.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/projects/shrinkflation/parsed_quantity_distribution.png" alt="Distributions of package sizes parsed from product names, in grams and millilitres" loading="lazy" />
-          <figcaption><strong>Figure 3:</strong> Package sizes parsed out of free-text product names (grams and millilitres, log scale). The regex parser recovers a usable size for 82% of products.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/projects/shrinkflation/raw_vs_cleaned_price.png" alt="Price distribution before and after cleaning on about 69 million rows" loading="lazy" />
-          <figcaption><strong>Figure 4:</strong> Distribution of ~69M scraped prices (log scale) before and after the cleaning step.</figcaption>
-        </figure>
-      </article>
-      <hr />
+        <article class="project">
+          <p class="kicker">Course project · CMPT 353 · Aug 2026</p>
+          <h3>Detecting shrinkflation in Canadian grocery prices</h3>
+          <p>Do products get smaller while their price per unit goes up? Using ~70 million scraped price observations from 8 Canadian grocery chains, I built a pipeline that parses package sizes out of free text, matches relaunched products across listings with TF-IDF, and tests the price effect against a control group. I then benchmarked a price index built from the same data against Statistics Canada's Food CPI.</p>
 
-      <!-- Reddit -->
-      <article class="project">
-        <h3>What makes a Reddit post succeed, and do city subreddits scale with population?</h3>
-        <p>A two-part analysis of 2022–2023 Reddit data on the SFU Hadoop cluster. Part one models what makes a post succeed from timing and title features. Part two joins subreddit activity to 2021 Census populations and fits a power law to see which Canadian cities are busier or quieter than their size predicts.</p>
-        <ul>
-          <li>PySpark pipeline on HDFS that reduced 18M Reddit records (150 subreddits) to 2M observations; an explicit schema and a narrow read path brought extraction down to about 37 minutes.</li>
-          <li>Scores differ by subreddit (Kruskal–Wallis) and weekday comments run higher (Mann–Whitney U), both p &lt; 0.001.</li>
-          <li>Gradient-boosted classifier for above-median engagement: <strong>82% accuracy, 0.80 F1, 0.87 AUC</strong>. Top predictors were subreddit size, posting time, title length and early engagement.</li>
-          <li>Power-law fit of regional subreddit activity against population: exponent ≈ 0.85, R² ≈ 0.78.</li>
-        </ul>
-        <div class="tags"><span>PySpark</span><span>Hadoop/HDFS</span><span>pandas</span><span>scikit-learn</span><span>SciPy</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/reddit-data-analysis-pyspark" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
+          <div class="stats">
+            <div><strong>+19.0%</strong><span>median unit-price change after a size cut</span></div>
+            <div><strong>+0.3%</strong><span>same-size control products</span></div>
+            <div><strong>2,214</strong><span>shrinkflation candidates found</span></div>
+            <div><strong>~70M</strong><span>scraped price records, 8 chains</span></div>
+          </div>
 
-      <!-- Health First -->
-      <article class="project">
-        <h3>Health First: a local-first habit tracker</h3>
-        <p>A gentle self-care app that works fully offline and backs up to the cloud, with 10 screens including daily goals, mood tracking, daily wins and a "Bad Day Mode", plus a supportive AI chat companion.</p>
-        <ul>
-          <li>IndexedDB for full offline use, with partial-completion tracking plus dark mode and large-text options.</li>
-          <li>Next.js and Prisma REST routes on PostgreSQL for registration, login, device linking and cloud backup.</li>
-          <li>Accounts secured with bcryptjs password hashing and JWT authentication stored in HTTP-only cookies.</li>
-        </ul>
-        <div class="tags"><span>TypeScript</span><span>React</span><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span><span>IndexedDB</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/Health-First" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
+          <ul>
+            <li>Mann–Whitney U against 49,209 same-size control pairs gave p &lt; 0.001; the effect differs by chain (Kruskal–Wallis, p ≈ 4×10⁻⁷), from +31.5% at Save-On-Foods to about +13% at No Frills and Galleria.</li>
+            <li>Found and corrected 100× pricing errors in 42,578 rows; the pipeline is covered by 78 automated tests.</li>
+            <li>Switching the index from an arithmetic to a geometric (Jevons) mean moved its growth from +13.7% to +1.8%, against +6.5% for official CPI.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>SciPy</span><span>TF-IDF</span><span>Hypothesis testing</span><span>Regression</span></div>
+          <p class="links">
+            <a class="btn" href="https://github.com/GodFather1180/CMPT353_Project/tree/main/grocery-project" target="_blank" rel="noopener">Code on GitHub ↗</a>
+            <a class="btn" href="assets/projects/shrinkflation/Shrinkflation_Report.pdf" target="_blank" rel="noopener">Full report (PDF) ↗</a>
+          </p>
 
-      <!-- Daily Dilemma -->
-      <article class="project">
-        <h3>Daily Dilemma: web app and user service</h3>
-        <p>A group project where users answer a daily ethical dilemma and see real-time community results, backed by a user service with authentication and analytics.</p>
-        <ul>
-          <li>Led the backend: 15 FastAPI and PostgreSQL REST endpoints with JWT authentication, plus analytics across 5 metrics including prediction accuracy, participation history and majority alignment.</li>
-          <li>Built the React components and frontend–backend integration for 3 game modes (Prediction, Opinion and Party), with community results refreshed by 5-second polling.</li>
-          <li>Wrote 100 PyTest tests (96%+ coverage) and deployed with Docker Compose on Render for 50+ users and 500+ votes.</li>
-        </ul>
-        <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>PyTest</span><span>JWT</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/Daily-Dilemma" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
+          <figure>
+            <a class="zoom" href="assets/projects/shrinkflation/shrink_vs_control.png" target="_blank" rel="noopener"><img src="assets/projects/shrinkflation/shrink_vs_control.png" alt="Histogram and box plot comparing price-per-unit change for shrinkflation candidates and control products" loading="lazy" /></a>
+            <figcaption><strong>Figure 1.</strong> Price-per-unit change for shrinkflation candidates (red) versus same-size control pairs (blue). Left: histogram clipped to −100%…300%. Right: box plot over the full range, showing the heavy tails in scraped data.</figcaption>
+          </figure>
+          <figure>
+            <a class="zoom" href="assets/projects/shrinkflation/price_index_vs_cpi.png" target="_blank" rel="noopener"><img src="assets/projects/shrinkflation/price_index_vs_cpi.png" alt="Line chart of the scraped-price index against the official StatCan Food CPI" loading="lazy" /></a>
+            <figcaption><strong>Figure 2.</strong> Our scraped-price index (geometric chain) versus StatCan's Food CPI, both rebased to 100. The shaded band is the federal GST/HST holiday, which only shows up in the tax-inclusive CPI.</figcaption>
+          </figure>
+          <div class="fig-row">
+            <figure>
+              <a class="zoom" href="assets/projects/shrinkflation/parsed_quantity_distribution.png" target="_blank" rel="noopener"><img src="assets/projects/shrinkflation/parsed_quantity_distribution.png" alt="Distributions of package sizes parsed from product names, in grams and millilitres" loading="lazy" /></a>
+              <figcaption><strong>Figure 3.</strong> Package sizes parsed from free-text names (log scale). The parser recovers a usable size for 82% of products.</figcaption>
+            </figure>
+            <figure>
+              <a class="zoom" href="assets/projects/shrinkflation/raw_vs_cleaned_price.png" target="_blank" rel="noopener"><img src="assets/projects/shrinkflation/raw_vs_cleaned_price.png" alt="Price distribution before and after cleaning on about 69 million rows" loading="lazy" /></a>
+              <figcaption><strong>Figure 4.</strong> ~69M scraped prices (log scale) before and after the cleaning step.</figcaption>
+            </figure>
+          </div>
+        </article>
 
-      <!-- LED board -->
-      <article class="project">
-        <h3>LED board: Spotify "now playing" display</h3>
-        <p>Drives a 64×32 RGB LED matrix on a Raspberry Pi. One mode shows album art, a centred title and a scrolling lyric line from Spotify; another is a web-controlled text scroller.</p>
-        <ul>
-          <li>Tick-based smooth scrolling with no blocking I/O in the render loop.</li>
-          <li>Web UI for controlling the scroller from any device on the local network.</li>
-        </ul>
-        <div class="tags"><span>Python</span><span>Raspberry Pi</span><span>Spotify API</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/led_board" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
+        <article class="project">
+          <p class="kicker">Course project · CMPT 353 · Jul 2026</p>
+          <h3>What makes a Reddit post succeed, and do city subreddits scale with population?</h3>
+          <p>A two-part analysis of 2022–2023 Reddit data on the SFU Hadoop cluster. Part one models what makes a post succeed from timing and title features. Part two joins subreddit activity to 2021 Census populations and fits a power law to see which Canadian cities are busier or quieter than their size predicts.</p>
+          <ul>
+            <li>PySpark pipeline on HDFS that reduced 18M Reddit records (150 subreddits) to 2M observations; an explicit schema and a narrow read path brought extraction down to about 37 minutes.</li>
+            <li>Scores differ by subreddit (Kruskal–Wallis) and weekday comments run higher (Mann–Whitney U), both p &lt; 0.001.</li>
+            <li>Gradient-boosted classifier for above-median engagement: <strong>82% accuracy, 0.80 F1, 0.87 AUC</strong>. Top predictors were subreddit size, posting time, title length and early engagement.</li>
+            <li>Power-law fit of regional subreddit activity against population: exponent ≈ 0.85, R² ≈ 0.78.</li>
+          </ul>
+          <div class="tags"><span>PySpark</span><span>Hadoop/HDFS</span><span>pandas</span><span>scikit-learn</span><span>SciPy</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/reddit-data-analysis-pyspark" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
 
-      <!-- Chess -->
-      <article class="project">
-        <h3>Chess in C++</h3>
-        <p>A two-player chess game rendered with SFML: click-to-move input, turn enforcement, per-piece legal move validation, and special moves including castling and en passant.</p>
-        <div class="tags"><span>C++</span><span>SFML</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/CHESS" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
+        <article class="project">
+          <p class="kicker">Group project · CMPT 276 · Oct – Dec 2025</p>
+          <h3>Daily Dilemma: web app and user service</h3>
+          <p>A group project where users answer a daily ethical dilemma and see real-time community results, backed by a user service with authentication and analytics.</p>
 
-      <!-- Coursework -->
-      <h2 class="section-heading">Machine-learning coursework</h2>
-      <p class="section-note">Outputs from CMPT 353 exercises (Computational Data Science, SFU).</p>
-      <hr />
+          <div class="stats">
+            <div><strong>15</strong><span>FastAPI + PostgreSQL REST endpoints</span></div>
+            <div><strong>100</strong><span>PyTest tests, 96%+ coverage</span></div>
+            <div><strong>50+</strong><span>users and 500+ votes once deployed</span></div>
+            <div><strong>3</strong><span>game modes</span></div>
+          </div>
 
-      <article class="project">
-        <h3>Naming colours: classifying RGB values into colour words</h3>
-        <p>Trained and compared Gaussian naive Bayes, k-nearest-neighbours and random-forest classifiers on labelled RGB samples, with and without LAB and HSV colour-space transforms. A random forest on HSV features scored best, at 74.2% validation accuracy.</p>
-        <div class="tags"><span>Python</span><span>scikit-learn</span><span>scikit-image</span></div>
-        <figure>
-          <img src="assets/projects/coursework/colour_classifier_random_forest_hsv.png" alt="Predicted colour-name regions for a random forest on HSV features" loading="lazy" />
-          <figcaption><strong>Figure 1:</strong> Colour names predicted across the LAB A/B plane at L=67 by the random forest on HSV features. It carves out narrow brown and yellow regions.</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/projects/coursework/colour_classifier_naive_bayes_rgb.png" alt="Predicted colour-name regions for Gaussian naive Bayes on raw RGB" loading="lazy" />
-          <figcaption><strong>Figure 2:</strong> The same slice for Gaussian naive Bayes on raw RGB, which uses smooth Gaussian boundaries and misses those regions.</figcaption>
-        </figure>
-      </article>
-      <hr />
+          <ul>
+            <li>Led the backend: JWT authentication and analytics across 5 metrics including prediction accuracy, participation history and majority alignment.</li>
+            <li>Built the React components and frontend–backend integration for 3 game modes (Prediction, Opinion and Party), with community results refreshed by 5-second polling.</li>
+            <li>Deployed with Docker Compose on Render.</li>
+          </ul>
+          <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>PyTest</span><span>JWT</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/Daily-Dilemma" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
 
-      <article class="project">
-        <h3>Clustering cities by their weather</h3>
-        <p>Projected monthly temperature and precipitation data onto two principal components and grouped it with k-means (k = 9). A companion classifier that predicts the city from its weather mostly confused cities with similar climates, such as Seattle and Portland or Victoria and Vancouver.</p>
-        <div class="tags"><span>Python</span><span>scikit-learn</span><span>PCA</span><span>k-means</span></div>
-        <figure>
-          <img src="assets/projects/coursework/weather_clusters_kmeans.png" alt="Scatter plot of weather data in two principal components, coloured by k-means cluster" loading="lazy" />
-          <figcaption><strong>Figure 3:</strong> K-means clusters of monthly weather data in the first two principal components.</figcaption>
-        </figure>
-      </article>
-      <hr />
+        <article class="project">
+          <p class="kicker">Personal project · Dec 2025</p>
+          <h3>Health First: a local-first habit tracker</h3>
+          <p>A gentle self-care app that works fully offline and backs up to the cloud, with 10 screens including daily goals, mood tracking, daily wins and a "Bad Day Mode", plus a supportive AI chat companion.</p>
+          <ul>
+            <li>IndexedDB for full offline use, with partial-completion tracking plus dark mode and large-text options.</li>
+            <li>Next.js and Prisma REST routes on PostgreSQL for registration, login, device linking and cloud backup.</li>
+            <li>Accounts secured with bcryptjs password hashing and JWT authentication stored in HTTP-only cookies.</li>
+          </ul>
+          <div class="tags"><span>TypeScript</span><span>React</span><span>Next.js</span><span>Prisma</span><span>PostgreSQL</span><span>IndexedDB</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/Health-First" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
 
-      <!-- More projects -->
-      <h2 class="section-heading">More projects</h2>
-      <hr />
+        <article class="project">
+          <p class="kicker">Personal project</p>
+          <h3>LED board: Spotify "now playing" display</h3>
+          <p>Drives a 64×32 RGB LED matrix on a Raspberry Pi. One mode shows album art, a centred title and a scrolling lyric line from Spotify; another is a web-controlled text scroller.</p>
+          <ul>
+            <li>Tick-based smooth scrolling with no blocking I/O in the render loop.</li>
+            <li>Web UI for controlling the scroller from any device on the local network.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Raspberry Pi</span><span>Spotify API</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/led_board" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
 
-      <article class="project compact">
-        <h3>Automated planter box</h3>
-        <p>Team project for SFU's ENSC 100W. A Flask app on a Raspberry Pi reads soil-moisture and reservoir sensors, waters automatically below a configurable threshold, and extends a motorized shade for rain and snow, with manual override from a web dashboard.</p>
-        <div class="tags"><span>Python</span><span>Flask</span><span>Raspberry Pi</span><span>JavaScript</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/planter-box" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
-      <article class="project compact">
-        <h3>Weather app</h3>
-        <p>A responsive weather app that pulls live data for any city, with local-storage caching to cut redundant API calls.</p>
-        <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>OpenWeatherMap API</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/weather-app" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
-      <article class="project compact">
-        <h3>Currency converter</h3>
-        <p>A desktop converter between CAD, USD, EUR, INR and BRL using live exchange rates.</p>
-        <div class="tags"><span>Python</span><span>Tkinter</span><span>REST API</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/Currency-Converter" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
-      <article class="project compact">
-        <h3>Graphing calculator</h3>
-        <p>A TI-83-style calculator with a custom GUI: expression entry with trig and exponents, plus function graphing drawn on a canvas.</p>
-        <div class="tags"><span>Python</span><span>PySimpleGUI</span><span>turtle</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/Graphing-Calculator-" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
-      <article class="project compact">
-        <h3>Desktop music player</h3>
-        <p>An mp3 player with play, pause, stop and skip controls over a local folder of songs.</p>
-        <div class="tags"><span>Python</span><span>Tkinter</span><span>pygame</span></div>
-        <p class="links"><a href="https://github.com/GodFather1180/MusicPlayer" target="_blank" rel="noopener">View code on GitHub</a></p>
-      </article>
-      <hr />
+        <article class="project">
+          <p class="kicker">Personal project</p>
+          <h3>Chess in C++</h3>
+          <p>A two-player chess game rendered with SFML: click-to-move input, turn enforcement, per-piece legal move validation, and special moves including castling and en passant.</p>
+          <div class="tags"><span>C++</span><span>SFML</span></div>
+          <p class="links"><a class="btn" href="https://github.com/GodFather1180/CHESS" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+        </article>
+      </section>
 
-      <!-- Skills -->
-      <h2 class="section-heading">Skills</h2>
-      <hr />
-      <dl class="skills">
-        <dt>Languages</dt>
-        <dd class="tags"><span>Python</span><span>SQL</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C++</span><span>R</span></dd>
-        <dt>Data &amp; ML</dt>
-        <dd class="tags"><span>pandas</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>PySpark</span><span>Hadoop/HDFS</span><span>Hypothesis testing</span><span>Regression</span><span>TF-IDF</span></dd>
-        <dt>Web &amp; backend</dt>
-        <dd class="tags"><span>React</span><span>Next.js</span><span>FastAPI</span><span>REST APIs</span><span>JWT authentication</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Prisma</span></dd>
-        <dt>Tools &amp; DevOps</dt>
-        <dd class="tags"><span>Docker</span><span>Docker Compose</span><span>Git/GitHub</span><span>PyTest</span><span>Render</span><span>Linux</span></dd>
-        <dt>Spoken languages</dt>
-        <dd class="tags"><span>English (fluent)</span><span>Hindi (fluent)</span><span>Punjabi (native)</span><span>Spanish (intermediate)</span></dd>
-      </dl>
-      <hr />
+      <!-- ===== Coursework ===== -->
+      <section id="coursework">
+        <header class="section-head">
+          <h2>Machine-learning coursework</h2>
+          <p>Outputs from CMPT 353 exercises (Computational Data Science, SFU).</p>
+        </header>
 
-      <!-- Education / experience -->
-      <h2 class="section-heading">Education &amp; experience</h2>
-      <hr />
-      <article class="project compact">
-        <h3>B.Sc. Data Science, Simon Fraser University</h3>
-        <p class="meta">Sept 2023 – 2028 · Burnaby, BC</p>
-        <p>Coursework: Computational Data Science, Data Structures and Algorithms, Databases, Software Engineering, Linear Algebra.</p>
-      </article>
-      <hr />
-      <article class="project compact">
-        <h3>Data Analyst, Fortune Law</h3>
-        <p class="meta">Jun 2022 – Jan 2023</p>
-        <p>Maintained and updated client records and Excel spreadsheets, keeping information organized and accessible for day-to-day operations. Reviewed records for missing or inconsistent information and corrected them to maintain data accuracy.</p>
-      </article>
+        <article class="project">
+          <h3>Naming colours: classifying RGB values into colour words</h3>
+          <p>Trained and compared Gaussian naive Bayes, k-nearest-neighbours and random-forest classifiers on labelled RGB samples, with and without LAB and HSV colour-space transforms. A random forest on HSV features scored best, at 74.2% validation accuracy.</p>
+          <div class="tags"><span>Python</span><span>scikit-learn</span><span>scikit-image</span></div>
+          <div class="fig-row">
+            <figure>
+              <a class="zoom" href="assets/projects/coursework/colour_classifier_random_forest_hsv.png" target="_blank" rel="noopener"><img src="assets/projects/coursework/colour_classifier_random_forest_hsv.png" alt="Predicted colour-name regions for a random forest on HSV features" loading="lazy" /></a>
+              <figcaption><strong>Random forest on HSV.</strong> Colour names predicted across the LAB A/B plane at L=67. It carves out narrow brown and yellow regions.</figcaption>
+            </figure>
+            <figure>
+              <a class="zoom" href="assets/projects/coursework/colour_classifier_naive_bayes_rgb.png" target="_blank" rel="noopener"><img src="assets/projects/coursework/colour_classifier_naive_bayes_rgb.png" alt="Predicted colour-name regions for Gaussian naive Bayes on raw RGB" loading="lazy" /></a>
+              <figcaption><strong>Naive Bayes on RGB.</strong> The same slice. Smooth Gaussian boundaries miss those regions.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Clustering cities by their weather</h3>
+          <p>Projected monthly temperature and precipitation data onto two principal components and grouped it with k-means (k = 9). A companion classifier that predicts the city from its weather mostly confused cities with similar climates, such as Seattle and Portland or Victoria and Vancouver.</p>
+          <div class="tags"><span>Python</span><span>scikit-learn</span><span>PCA</span><span>k-means</span></div>
+          <figure>
+            <a class="zoom" href="assets/projects/coursework/weather_clusters_kmeans.png" target="_blank" rel="noopener"><img src="assets/projects/coursework/weather_clusters_kmeans.png" alt="Scatter plot of weather data in two principal components, coloured by k-means cluster" loading="lazy" /></a>
+            <figcaption><strong>K-means clusters</strong> of monthly weather data in the first two principal components.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <!-- ===== More projects ===== -->
+      <section id="more">
+        <header class="section-head">
+          <h2>More projects</h2>
+        </header>
+        <div class="cards">
+          <article class="card">
+            <h3>Automated planter box</h3>
+            <p>Team project for SFU's ENSC 100W. A Flask app on a Raspberry Pi reads soil-moisture and reservoir sensors, waters automatically below a configurable threshold, and extends a motorized shade for rain and snow, with manual override from a web dashboard.</p>
+            <div class="tags"><span>Python</span><span>Flask</span><span>Raspberry Pi</span><span>JavaScript</span></div>
+            <a class="more-link" href="https://github.com/GodFather1180/planter-box" target="_blank" rel="noopener">Code on GitHub ↗</a>
+          </article>
+          <article class="card">
+            <h3>Weather app</h3>
+            <p>A responsive weather app that pulls live data for any city, with local-storage caching to cut redundant API calls.</p>
+            <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>OpenWeatherMap API</span></div>
+            <a class="more-link" href="https://github.com/GodFather1180/weather-app" target="_blank" rel="noopener">Code on GitHub ↗</a>
+          </article>
+          <article class="card">
+            <h3>Currency converter</h3>
+            <p>A desktop converter between CAD, USD, EUR, INR and BRL using live exchange rates.</p>
+            <div class="tags"><span>Python</span><span>Tkinter</span><span>REST API</span></div>
+            <a class="more-link" href="https://github.com/GodFather1180/Currency-Converter" target="_blank" rel="noopener">Code on GitHub ↗</a>
+          </article>
+          <article class="card">
+            <h3>Graphing calculator</h3>
+            <p>A TI-83-style calculator with a custom GUI: expression entry with trig and exponents, plus function graphing drawn on a canvas.</p>
+            <div class="tags"><span>Python</span><span>PySimpleGUI</span><span>turtle</span></div>
+            <a class="more-link" href="https://github.com/GodFather1180/Graphing-Calculator-" target="_blank" rel="noopener">Code on GitHub ↗</a>
+          </article>
+          <article class="card">
+            <h3>Desktop music player</h3>
+            <p>An mp3 player with play, pause, stop and skip controls over a local folder of songs.</p>
+            <div class="tags"><span>Python</span><span>Tkinter</span><span>pygame</span></div>
+            <a class="more-link" href="https://github.com/GodFather1180/MusicPlayer" target="_blank" rel="noopener">Code on GitHub ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== Skills ===== -->
+      <section id="skills">
+        <header class="section-head">
+          <h2>Skills</h2>
+        </header>
+        <dl class="skills">
+          <div><dt>Languages</dt>
+          <dd class="tags"><span>Python</span><span>SQL</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C++</span><span>R</span></dd></div>
+          <div><dt>Data &amp; ML</dt>
+          <dd class="tags"><span>pandas</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>PySpark</span><span>Hadoop/HDFS</span><span>Hypothesis testing</span><span>Regression</span><span>TF-IDF</span></dd></div>
+          <div><dt>Web &amp; backend</dt>
+          <dd class="tags"><span>React</span><span>Next.js</span><span>FastAPI</span><span>REST APIs</span><span>JWT authentication</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Prisma</span></dd></div>
+          <div><dt>Tools &amp; DevOps</dt>
+          <dd class="tags"><span>Docker</span><span>Docker Compose</span><span>Git/GitHub</span><span>PyTest</span><span>Render</span><span>Linux</span></dd></div>
+          <div><dt>Spoken languages</dt>
+          <dd class="tags"><span>English (fluent)</span><span>Hindi (fluent)</span><span>Punjabi (native)</span><span>Spanish (intermediate)</span></dd></div>
+        </dl>
+      </section>
+
+      <!-- ===== Experience ===== -->
+      <section id="experience">
+        <header class="section-head">
+          <h2>Education &amp; experience</h2>
+        </header>
+        <div class="timeline">
+          <div class="row">
+            <p class="when">Sept 2023 – 2028</p>
+            <div>
+              <h3>B.Sc. Data Science</h3>
+              <p class="where">Simon Fraser University · Burnaby, BC</p>
+              <p>Coursework: Computational Data Science, Data Structures and Algorithms, Databases, Software Engineering, Linear Algebra.</p>
+            </div>
+          </div>
+          <div class="row">
+            <p class="when">Jun 2022 – Jan 2023</p>
+            <div>
+              <h3>Data Analyst</h3>
+              <p class="where">Fortune Law</p>
+              <p>Maintained and updated client records and Excel spreadsheets, keeping information organized and accessible for day-to-day operations. Reviewed records for missing or inconsistent information and corrected them to maintain data accuracy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <footer>
         <a href="mailto:tarundeep107@gmail.com">tarundeep107@gmail.com</a>
@@ -244,5 +290,24 @@
     </main>
 
   </div>
+
+  <script>
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+      if (!('IntersectionObserver' in window) || !links.length) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          links.forEach(function (l) {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id);
+          });
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      links.forEach(function (l) {
+        var s = document.querySelector(l.getAttribute('href'));
+        if (s) io.observe(s);
+      });
+    })();
+  </script>
 </body>
 </html>
